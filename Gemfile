@@ -40,3 +40,9 @@ gem 'unicorn'
 # gem 'debugger'
 gem 'refinerycms', '~> 2.0.0'
 gem 'refinerycms-i18n', '~> 2.0.0'
+
+group :development, :test do
+  gem 'pry-nav'
+  gem 'pry-rails'
+  gem 'debugger'
+end
