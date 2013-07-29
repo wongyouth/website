@@ -1301,3 +1301,19 @@ $default-float: left;
 // $topbar-sticky-class: ".sticky";
 
 @import 'foundation';
+
+// =============================== //
+#page {
+  @include grid-row;
+}
+
+footer {
+  margin-top: emCalc(20);
+  padding: emCalc(30);
+  background: lightblue;
+
+  p {
+    margin: 0;
+  }
+}
+
