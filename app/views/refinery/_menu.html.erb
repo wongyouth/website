@@ -6,7 +6,7 @@
     css = [(css || 'menu clearfix')].flatten.join(' ')
     hide_children = Refinery::Core.menu_hide_children if hide_children.nil?
 -%>
-<nav id='<%= dom_id %>' class='top-bar <%= css %>'>
+<nav id='<%= dom_id %>' class='top-bar'>
   <ul class="title-area">
     <!-- Title Area -->
     <li class="name">
@@ -18,7 +18,7 @@
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
 
-  <section class="top-bar-section">
+  <div class="top-bar-section">
     <ul class="right">
       <%= render :partial => '/refinery/menu_branch', :collection => roots,
                  :locals => {
@@ -28,6 +28,6 @@
                    :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
                  } -%>
     </ul>
-  </section>
+  </div>
 </nav>
 <% end -%>
